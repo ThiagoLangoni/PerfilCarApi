@@ -119,7 +119,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n      \"id\": 3,\n}"
+					"raw": "{\n      \"id\": 3\n}"
 				},
 				"url": {
 					"raw": "http://localhost:8080/perfil/perfil",

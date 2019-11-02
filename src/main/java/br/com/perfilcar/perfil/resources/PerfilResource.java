@@ -43,6 +43,12 @@ public class PerfilResource {
 		return perfilRepository.save(perfil);
 	}
 
+	@DeleteMapping("/perfil")
+	 public void deletaPerfil(@RequestBody Perfil perfil) {
+		perfilRepository.delete(perfil);
+	}
+
+	
 	/*@DeleteMapping("/perfil")
 	public Perfil deletaPerfil=Perfil(@RequestBody Perfil perfil) {
 		perfilRepository.delete(perfil);
