@@ -1,10 +1,13 @@
 package br.com.perfilcar.perfil.resources;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -34,17 +37,17 @@ public class PerfilResource {
 	public Perfil salvaPerfil(@RequestBody Perfil perfil) {
 		return perfilRepository.save(perfil);
 	}
-	
-	@PostMapping("/perfil")
+
+	@PutMapping("/perfil")
 	public Perfil atualizaPerfil(@RequestBody Perfil perfil) {
 		return perfilRepository.save(perfil);
 	}
-	
-	@DeleteMapping("/perfil")
-	public void Perfil deletaPerfil=Perfil(@RequestBody Perfil perfil) {
-		perfilRepository.save(perfil);
+
+	/*@DeleteMapping("/perfil")
+	public Perfil deletaPerfil=Perfil(@RequestBody Perfil perfil) {
+		perfilRepository.delete(perfil);
 	}
-		
+		*/
 /*	@DeleteMapping("/Perfil")
 	public void Perfil deletaPerfil(@RequestBody Perfil perfil) {
 		perfilRepository.delete(perfil);
