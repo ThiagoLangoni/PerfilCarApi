@@ -13,48 +13,48 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 //import br.com.perfilcar.perfil.kafka.Producer;
-import br.com.perfilcar.perfil.models.Perfil;
-import br.com.perfilcar.perfil.repository.PerfilRepository;
+import br.com.perfilcar.perfil.models.Usuario;
+import br.com.perfilcar.perfil.repository.UsuarioRepository;
 
 @RestController
-@RequestMapping(path = "/perfil")
-public class PerfilResource {
+@RequestMapping(path = "/usuario")
+public class UsuarioResource {
 
 	
 	//private final Producer producer = null;
 	
 	@Autowired
-	PerfilRepository perfilRepository;
+	UsuarioRepository usuarioRepository;
 	
 	
-	@GetMapping("/perfis")
-	public List<Perfil> listaPerfis(){
-		//producer.send("Pedido de Lista de Perfil");
-		return perfilRepository.findAll();
+	@GetMapping("/usuarios")
+	public List<Usuario> listaUsuarios(){
+		//producer.send("Pedido de Lista de Usuario");
+		return usuarioRepository.findAll();
 	}
 	
-	@GetMapping("/perfil/{id}")
-	public Perfil listaPerfilUnico(@PathVariable(value = "id") long id){
+	@GetMapping("/usuario/{idUsuario}")
+	public Usuario listausuarioUnico(@PathVariable(value = "idUsuario") long idUsuario){
 		//producer.send("Pedido de Lista de Perfil por id");
-		return perfilRepository.findById(id);
+		return usuarioRepository.findById(idUsuario);
 	}
 	
-	@PostMapping("/perfil")
-	public Perfil salvaPerfil(@RequestBody Perfil perfil) {
+	@PostMapping("/usuario")
+	public Usuario salvaUsuario(@RequestBody Usuario usuario) {
 		//producer.send("Pedido de criação de Perfil");
-		return perfilRepository.save(perfil);
+		return usuarioRepository.save(usuario);
 	}
 
-	@PutMapping("/perfil")
-	public Perfil atualizaPerfil(@RequestBody Perfil perfil) {
+	@PutMapping("/usuario")
+	public Usuario atualizaUsuario(@RequestBody Usuario usuario) {
 		//producer.send("Pedido de atualização de Perfil");
-		return perfilRepository.save(perfil);
+		return usuarioRepository.save(usuario);
 	}
 
-	@DeleteMapping("/perfil")
-	 public void deletaPerfil(@RequestBody Perfil perfil) {
+	@DeleteMapping("/usuario")
+	 public void deletaUsuario(@RequestBody Usuario usuario) {
 		//producer.send("Pedido de deleção de Perfil");
-		perfilRepository.delete(perfil);
+		usuarioRepository.delete(usuario);
 	}
 
 }

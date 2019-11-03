@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "Lista Metas",
+			"name": "Lista Perfil",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -26,7 +26,138 @@
 			"response": []
 		},
 		{
-			"name": "Lista Meta por Id",
+			"name": "Lista Perfil por Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/perfil/perfil/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"perfil",
+						"perfil",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cria Perfil",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"anoFabricacao\": \"2019 - fabricacao\",\n        \"anoModelo\": \"2020 - modelo\",\n        \"apelido\": \"ié ié  5 - apelido\",\n        \"emailProprietario\": \"a@b.c\",\n        \"informacoesAdicionais\": \"rááááá informações adicionais\",\n        \"marca\": \"marca do carro - marca\",\n        \"modelo\": \"modelo do carro - modelo\",\n        \"nomeProprietario\": \"Eduardo Matoso - proprietário\",\n        \"quilometragemAtual\": \"10.000 - KM\",\n        \"timestamp\": \"timestamp 2019-11-02-19.41.55\"\n    }\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/perfil/perfil",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"perfil",
+						"perfil"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualiza Perfil",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 5,\r\n    \"apelido\": \"ié ié atualizado- apelido\",\r\n    \"marca\": \"marca do carro - marca\",\r\n    \"modelo\": \"modelo do carro - modelo\",\r\n    \"quilometragemAtual\": \"10.000 - KM\",\r\n    \"anoFabricacao\": \"2019 - fabricacao\",\r\n    \"anoModelo\": \"2020 - modelo\",\r\n    \"nomeProprietario\": \"Eduardo Matoso - proprietário\",\r\n    \"informacoesAdicionais\": \"rááááá informações adicionais\",\r\n    \"timestamp\": \"timestamp 2019-11-02-19.41.55\",\r\n    \"emailProprietario\": \"a@b.c\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/perfil/perfil",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"perfil",
+						"perfil"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deleta Perfil",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n      \"id\": 5\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/perfil/perfil",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"perfil",
+						"perfil"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista Usuários",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/usuario/usuarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuario",
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista Usuário por Id",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -47,7 +178,7 @@
 			"response": []
 		},
 		{
-			"name": "Cria Meta",
+			"name": "Cria Usuário",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -59,25 +190,25 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "    {\n        \"apelido\": \"ié ié v3 - apelido\",\n        \"marca\": \"marca do carro - marca\",\n        \"modelo\": \"modelo do carro - modelo\",\n        \"quilometragemAtual\": \"10.000 - KM\",\n        \"anoFabricacao\": \"2019 - fabricacao\",\n        \"anoModelo\": \"2020 - modelo\",\n        \"nomeProprietario\": \"Eduardo Matoso - proprietário\",\n        \"informacoesAdicionais\": \"rááááá informações adicionais\\n\",\n        \"timestamp\": \"timestamp 2019-11-02-19.41.55\"\n    }\n"
+					"raw": "    {\n        \"emailUsuario\": \"a@b.c\",\n        \"nomeUsuario\": \"Eduardo Matoso - proprietário\",\n        \"senhaUsuario\": \"marca do carro - marca\"\n    }\n"
 				},
 				"url": {
-					"raw": "http://localhost:8080/perfil/perfil",
+					"raw": "http://localhost:8080/usuario/usuario",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"perfil",
-						"perfil"
+						"usuario",
+						"usuario"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "Atualiza Meta",
+			"name": "Atualiza Usuário",
 			"request": {
 				"method": "PUT",
 				"header": [
@@ -107,7 +238,7 @@
 			"response": []
 		},
 		{
-			"name": "Deleta Meta",
+			"name": "Deleta Usuário",
 			"request": {
 				"method": "DELETE",
 				"header": [
@@ -119,18 +250,18 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n      \"id\": 3\n}"
+					"raw": "{\n      \"idUsuario\": 8\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/perfil/perfil",
+					"raw": "http://localhost:8080/usuario/usuario",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"perfil",
-						"perfil"
+						"usuario",
+						"usuario"
 					]
 				}
 			},

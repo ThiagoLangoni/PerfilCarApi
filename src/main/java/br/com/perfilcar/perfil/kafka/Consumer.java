@@ -1,5 +1,5 @@
 package br.com.perfilcar.perfil.kafka;
-
+/*
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 
@@ -10,3 +10,4 @@ public class Consumer {
     System.out.println("Got message: " + message);
   }
 }
+*/

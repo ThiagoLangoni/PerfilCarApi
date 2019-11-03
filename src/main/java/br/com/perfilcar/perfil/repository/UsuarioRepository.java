@@ -3,9 +3,10 @@ package br.com.perfilcar.perfil.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import br.com.perfilcar.perfil.models.Perfil;
+import br.com.perfilcar.perfil.models.Usuario;
 
 
-public interface PerfilRepository  extends JpaRepository<Perfil,Long> {
+public interface UsuarioRepository  extends JpaRepository<Usuario,Long> {
 
-	Perfil findById(long id);
+	Usuario findById(long idUsuario);
 }

@@ -1,5 +1,7 @@
 package br.com.perfilcar.perfil.kafka;
 
+/*
+
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
@@ -15,3 +17,4 @@ public class Producer {
     producer.send("topicoLog", message);
   }
 }
+*/

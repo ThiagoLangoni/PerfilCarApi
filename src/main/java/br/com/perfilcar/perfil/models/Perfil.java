@@ -17,7 +17,6 @@ public class Perfil implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
     private String apelido;
     private String marca;
     private String modelo;
@@ -27,6 +26,8 @@ public class Perfil implements Serializable{
     private String nomeProprietario;
     private String informacoesAdicionais;
     private String timestamp;
+    private String emailProprietario;
+    
 	public Long getId() {
 		return id;
 	}
@@ -69,12 +70,7 @@ public class Perfil implements Serializable{
 	public void setAnoModelo(String anoModelo) {
 		this.anoModelo = anoModelo;
 	}
-	public String getNomeProprietario() {
-		return nomeProprietario;
-	}
-	public void setNomeProprietario(String nomeProprietario) {
-		this.nomeProprietario = nomeProprietario;
-	}
+	
 	public String getInformacoesAdicionais() {
 		return informacoesAdicionais;
 	}
@@ -89,6 +85,18 @@ public class Perfil implements Serializable{
 	}
 	public static long getSerialversionuid() {
 		return serialVersionUID;
+	}
+	public String getNomeProprietario() {
+		return nomeProprietario;
+	}
+	public void setNomeProprietario(String nomeProprietario) {
+		this.nomeProprietario = nomeProprietario;
+	}
+	public String getEmailProprietario() {
+		return emailProprietario;
+	}
+	public void setEmailProprietario(String emailProprietario) {
+		this.emailProprietario = emailProprietario;
 	}
   
 }
