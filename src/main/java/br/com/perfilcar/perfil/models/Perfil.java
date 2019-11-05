@@ -1,7 +1,5 @@
 package br.com.perfilcar.perfil.models;
 
-import java.io.Serializable;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -10,9 +8,9 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "perfis")
-public class Perfil implements Serializable{
+public class Perfil {
 
-	private static final long serialVersionUID = 1L;
+//	private static final long serialVersionUID = 1L;
     
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -83,9 +81,9 @@ public class Perfil implements Serializable{
 	public void setTimestamp(String timestamp) {
 		this.timestamp = timestamp;
 	}
-	public static long getSerialversionuid() {
+/*	public static long getSerialversionuid() {
 		return serialVersionUID;
-	}
+	} */
 	public String getNomeProprietario() {
 		return nomeProprietario;
 	}
@@ -95,8 +93,8 @@ public class Perfil implements Serializable{
 	public String getEmailProprietario() {
 		return emailProprietario;
 	}
-	public void setEmailProprietario(String emailProprietario) {
-		this.emailProprietario = emailProprietario;
+	public void setEmailProprietario(String email) {
+		this.emailProprietario = email;
 	}
   
 }

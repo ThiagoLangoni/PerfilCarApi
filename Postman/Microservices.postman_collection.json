@@ -47,6 +47,27 @@
 			"response": []
 		},
 		{
+			"name": "Lista Perfil por e-mail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/perfil/perfis/a@b.c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"perfil",
+						"perfis",
+						"a@b.c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Cria Perfil",
 			"request": {
 				"method": "POST",
@@ -59,7 +80,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "    {\n        \"anoFabricacao\": \"2019 - fabricacao\",\n        \"anoModelo\": \"2020 - modelo\",\n        \"apelido\": \"ié ié  5 - apelido\",\n        \"emailProprietario\": \"a@b.c\",\n        \"informacoesAdicionais\": \"rááááá informações adicionais\",\n        \"marca\": \"marca do carro - marca\",\n        \"modelo\": \"modelo do carro - modelo\",\n        \"nomeProprietario\": \"Eduardo Matoso - proprietário\",\n        \"quilometragemAtual\": \"10.000 - KM\",\n        \"timestamp\": \"timestamp 2019-11-02-19.41.55\"\n    }\n"
+					"raw": "    {\n        \"apelido\": \"ié ié 3 - apelido\",\n        \"marca\": \"marca do carro - marca\",\n        \"modelo\": \"modelo do carro - modelo\",\n        \"quilometragemAtual\": \"10.000 - KM\",\n        \"anoFabricacao\": \"2019 - fabricacao\",\n        \"anoModelo\": \"2020 - modelo\",\n        \"nomeProprietario\": \"Eduardo Matoso - proprietário\",\n        \"informacoesAdicionais\": \"rááááá informações adicionais\",\n        \"timestamp\": \"timestamp 2019-11-02-19.41.55\",\n        \"emailProprietario\": \"a@b.cd\"\n    }\n"
 				},
 				"url": {
 					"raw": "http://localhost:8080/perfil/perfil",
@@ -119,7 +140,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n      \"id\": 5\n}"
+					"raw": "{\n      \"id\": 6\n}"
 				},
 				"url": {
 					"raw": "http://localhost:8080/perfil/perfil",
@@ -162,16 +183,37 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/perfil/perfil/1",
+					"raw": "http://localhost:8080/usuario/usuario/8",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"perfil",
-						"perfil",
-						"1"
+						"usuario",
+						"usuario",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista Usuário por e-mail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/usuario/usuarios/a@b.c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuario",
+						"usuarios",
+						"a@b.c"
 					]
 				}
 			},
@@ -190,7 +232,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "    {\n        \"emailUsuario\": \"a@b.c\",\n        \"nomeUsuario\": \"Eduardo Matoso - proprietário\",\n        \"senhaUsuario\": \"marca do carro - marca\"\n    }\n"
+					"raw": "    {\n        \"emailUsuario\": \"a@b.cd\",\n        \"nomeUsuario\": \"Eduardo Matoso 8 - proprietário\",\n        \"senhaUsuario\": \"456\"\n    }\n"
 				},
 				"url": {
 					"raw": "http://localhost:8080/usuario/usuario",
@@ -220,18 +262,18 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\": 2,\r\n    \"apelido\": \"ié ié 3 - apelido\",\r\n    \"marca\": \"marca do carro - marca\\n\",\r\n    \"modelo\": \"modelo do carro - modelo\",\r\n    \"quilometragemAtual\": \"10.000 - KM\",\r\n    \"anoFabricacao\": \"2019 - fabricacao\",\r\n    \"anoModelo\": \"2020 - modelo\",\r\n    \"nomeProprietario\": \"Eduardo Matoso - proprietário\",\r\n    \"informacoesAdicionais\": \"rááááá informações adicionais\\n\",\r\n    \"timestamp\": \"timestamp 2019-11-02-19.41.55\"\r\n}"
+					"raw": "    {\r\n        \"idUsuario\": 11,\r\n        \"emailUsuario\": \"a@b.c\",\r\n        \"nomeUsuario\": \"Eduardo Matoso - proprietário\",\r\n        \"senhaUsuario\": \"456\"\r\n    }"
 				},
 				"url": {
-					"raw": "http://localhost:8080/perfil/perfil",
+					"raw": "http://localhost:8080/usuario/usuario",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"perfil",
-						"perfil"
+						"usuario",
+						"usuario"
 					]
 				}
 			},

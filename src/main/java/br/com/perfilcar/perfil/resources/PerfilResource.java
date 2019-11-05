@@ -33,7 +33,13 @@ public class PerfilResource {
 		return perfilRepository.findAll();
 	}
 	
-	@GetMapping("/perfil/{id}")
+	@GetMapping("/perfis/{emailProprietario}")
+	public List<Perfil> listaPerfisPorEmail(@PathVariable(value = "emailProprietario") String emailProprietario){
+		//producer.send("Pedido de Lista de Perfil por e-mail");
+		return perfilRepository.findByEmailProprietario(emailProprietario);
+	}
+	
+		@GetMapping("/perfil/{id}")
 	public Perfil listaPerfilUnico(@PathVariable(value = "id") long id){
 		//producer.send("Pedido de Lista de Perfil por id");
 		return perfilRepository.findById(id);

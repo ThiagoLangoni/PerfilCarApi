@@ -32,6 +32,12 @@ public class UsuarioResource {
 		//producer.send("Pedido de Lista de Usuario");
 		return usuarioRepository.findAll();
 	}
+
+	@GetMapping("/usuarios/{emailUsuario}")
+	public List<Usuario> listaUsuariosPorEmail(@PathVariable(value = "emailUsuario") String emailUsuario){
+		//producer.send("Pedido de Lista de Usuario por e-mail");
+		return usuarioRepository.findByEmailUsuario(emailUsuario);
+	}
 	
 	@GetMapping("/usuario/{idUsuario}")
 	public Usuario listausuarioUnico(@PathVariable(value = "idUsuario") long idUsuario){
